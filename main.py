@@ -10,8 +10,8 @@ os.environ['SDL_VIDEO_CENTERED'] = '1'
 pygame.init()
 
 # constants
-WIDTH = 400
-HEIGHT = 400
+WIDTH = 1440
+HEIGHT = 900
 FPS = 3
 
 # RGB colo
@@ -33,26 +33,25 @@ my_images = [
 
 # changes size of all images to fit screen
 for i in range(len(my_images)):
-  my_images[i] = pygame.transform.scale(my_images[i], (300, 200))                                           
+  my_images[i] = pygame.transform.scale(my_images[i], (500, 500))                                           
 # set Window
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Space Cow!")
 WINDOW.fill(white)
 
 # set up your font
-font = pygame.font.Font('./Fonts/Trispace-Bold.ttf',9)
+font = pygame.font.Font('./Fonts/Trispace-Bold.ttf',20)
 # create your text
 text = font.render('Code by Colton Chappell, Dylan Teel, Joshua Miller, and Nick Winkler', True, black, white)
 textRect = text.get_rect()
 
-textRect.center = (WIDTH // 2, HEIGHT // 7)
+textRect.center = (WIDTH // 1.9, HEIGHT // 7)
 
 
 text2 = font.render('Art By Devin Simitz', True, black, white)
 textRect2 = text.get_rect()
 
-textRect2.center = (WIDTH // 2, HEIGHT // 5)
-
+textRect2.center = (WIDTH // 1.4, HEIGHT // 5)
 
 # display text
 WINDOW.blit(text, textRect)
@@ -65,7 +64,7 @@ def drawShape():
   global image_count
   if (image_count == 3):
     image_count = 0
-  WINDOW.blit(my_images[image_count], (0, 100))
+  WINDOW.blit(my_images[image_count], (WIDTH // 3, HEIGHT // 3))
   pygame.display.flip()
   image_count += 1
   
