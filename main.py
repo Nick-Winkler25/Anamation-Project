@@ -45,13 +45,13 @@ font = pygame.font.Font('./Fonts/Trispace-Bold.ttf',20)
 text = font.render('Code by Colton Chappell, Dylan Teel, Joshua Miller, and Nick Winkler', True, black, white)
 textRect = text.get_rect()
 
-textRect.center = (WIDTH // 1.9, HEIGHT // 7)
+textRect.center = (WIDTH // 2, HEIGHT // 7)
 
 
 text2 = font.render('Art By Devin Simitz', True, black, white)
 textRect2 = text.get_rect()
 
-textRect2.center = (WIDTH // 1.4, HEIGHT // 5)
+textRect2.center = (WIDTH // 2, HEIGHT // 5)
 
 # display text
 WINDOW.blit(text, textRect)
